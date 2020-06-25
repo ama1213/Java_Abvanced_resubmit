@@ -1,9 +1,15 @@
 package game;
 
+/**
+* 	カードクラス
+*/
 public class Card {
 	private final Symbol symbol;
 	private final Rank rank;
 	
+	/**
+	* getter
+	*/
 	public String getSymbol() {
 		return symbol.getSymbol();
 	}
@@ -15,7 +21,11 @@ public class Card {
 	public int getStrength() {
 		return rank.getStrength();
 	}
-	Card(Symbol symbol, Rank rank) {
+	
+	/**
+	* コンストラクタ
+	*/
+	public Card(Symbol symbol, Rank rank) {
 		this.symbol = symbol;
 		this.rank = rank;
 	}

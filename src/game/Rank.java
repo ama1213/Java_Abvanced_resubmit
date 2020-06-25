@@ -1,5 +1,8 @@
 package game;
 
+/**
+* カードランクenum
+*/
 public enum Rank {
 	TWO("2",2),
 	THREE("3",3),
@@ -18,6 +21,9 @@ public enum Rank {
 	private String label;
 	private int strength;
 	
+	/**
+	* getter
+	*/
 	public String getLabel() {
 		return label;
 	}
@@ -25,17 +31,20 @@ public enum Rank {
 		return strength;
 	}
 	
+	/**
+	* コンストラクタ
+	*/
 	Rank(String label, int strength) {
 		this.label = label;
 		this.strength = strength;
 	}
 	
-//	static Rank getRankValue(String label) {
-//		for(Rank z : Rank.values()) {
-//			if(z.getLabel().equals(label)) {
-//				return z;
-//			}
-//		}
-//		return null;
-//	}
+	static Rank getRankValue(String label) {
+		for(Rank z : Rank.values()) {
+			if(z.getLabel().equals(label)) {
+				return z;
+			}
+		}
+		return null;
+	}
 }
